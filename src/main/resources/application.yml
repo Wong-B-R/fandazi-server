@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fandazi-server
+  profiles:
+    active: local          # 读取每个人自己的 application-local.yml
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fandazi?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true      # max_count 自动对应 maxCount
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   # 控制台打印 SQL，方便调试
+  global-config:
+    db-config:
+      id-type: auto
+
+wx:
+  appid: wx3e6ba6a100ef2b1e

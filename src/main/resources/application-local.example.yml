@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: 填你自己的
+    password: 填你自己的
+
+wx:
+  secret: 填你自己的
+jwt:
+  secret: 填你自己的
